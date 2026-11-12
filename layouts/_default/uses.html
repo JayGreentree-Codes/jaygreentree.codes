@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <article class="py-12 max-w-3xl">
+    <header class="border-b border-neutral-800/80 pb-8">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
+        {{ .Title }}
+      </h1>
+      {{ with .Params.summary }}
+        <p class="mt-4 text-lg text-neutral-400 leading-relaxed">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="mt-10 space-y-12">
+      {{ range .Params.categories }}
+        <section>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-red-400 mb-5">{{ .name }}</h2>
+          <div class="grid grid-cols-1 gap-4">
+            {{ range .items }}
+              <div class="p-5 rounded-2xl bg-neutral-900/40 border border-neutral-800/80 hover:border-red-500/30 transition">
+                <h3 class="font-semibold text-white">{{ .name }}</h3>
+                <p class="text-sm text-neutral-400 mt-1 leading-relaxed">{{ .detail }}</p>
+              </div>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    </div>
+  </article>
+{{ end }}

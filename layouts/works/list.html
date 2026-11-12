@@ -1,31 +1,31 @@
 {{ define "main" }}
-  <header class="py-12 border-b border-slate-800/80">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-br from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+  <header class="py-12 border-b border-neutral-800/80">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
       {{ .Title | default "Works" }}
     </h1>
     {{ with .Content }}
-      <div class="mt-4 text-lg text-slate-400 max-w-2xl">{{ . }}</div>
+      <div class="mt-4 text-lg text-neutral-400 max-w-2xl">{{ . }}</div>
     {{ end }}
   </header>
 
   <section class="py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {{ range .Pages }}
-        <a href="{{ .RelPermalink }}" class="group block rounded-2xl bg-slate-900/50 border border-slate-800/80 p-4 hover:border-sky-500/40 hover:bg-slate-900 transition duration-300">
-          <div class="overflow-hidden rounded-xl bg-slate-800 aspect-video mb-4">
+        <a href="{{ .RelPermalink }}" class="group block rounded-2xl bg-neutral-900/50 border border-neutral-800/80 p-4 hover:border-red-500/40 hover:bg-neutral-900 transition duration-300">
+          <div class="overflow-hidden rounded-xl bg-neutral-800 aspect-video mb-4">
             {{ with .Params.thumbnail }}
               <img src="{{ . }}" alt="{{ $.Title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-500" />
             {{ end }}
           </div>
           <div class="flex items-center justify-between gap-4">
-            <h2 class="text-xl font-semibold text-white group-hover:text-sky-300 transition">{{ .Title }}</h2>
-            <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-400">{{ .Params.year }}</span>
+            <h2 class="text-xl font-semibold text-white group-hover:text-red-300 transition">{{ .Title }}</h2>
+            <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-neutral-800 text-neutral-400">{{ .Params.year }}</span>
           </div>
-          <p class="text-slate-400 text-sm mt-1">{{ .Params.client }}</p>
+          <p class="text-neutral-400 text-sm mt-1">{{ .Params.client }}</p>
           {{ with .Params.tags }}
             <div class="flex flex-wrap gap-2 mt-4">
               {{ range . }}
-                <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-300">{{ . }}</span>
+                <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-red-500/10 border border-red-500/20 text-red-300">{{ . }}</span>
               {{ end }}
             </div>
           {{ end }}

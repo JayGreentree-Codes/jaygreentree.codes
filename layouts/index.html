@@ -1,25 +1,25 @@
 {{ define "main" }}
   <!-- Hero Section -->
-  <section class="py-16 md:py-24 border-b border-slate-800/80">
+  <section class="py-16 md:py-24 border-b border-neutral-800/80">
     {{ with site.Params.availability }}
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-medium mb-6">
-        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
         {{ . }}
       </div>
     {{ end }}
 
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-br from-white via-slate-200 to-slate-400 bg-clip-text text-transparent max-w-3xl leading-[1.15]">
+    <h1 class="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent max-w-3xl leading-[1.15]">
       {{ .Params.hero_headline }}
     </h1>
-    <p class="mt-6 text-lg text-slate-400 max-w-2xl leading-relaxed">
+    <p class="mt-6 text-lg text-neutral-400 max-w-2xl leading-relaxed">
       {{ .Params.hero_subtext }}
     </p>
     {{ if and .Params.cta_label .Params.cta_link }}
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="{{ .Params.cta_link }}" class="inline-flex items-center px-5 py-3 rounded-xl bg-sky-500 text-slate-950 text-sm font-semibold hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
+        <a href="{{ .Params.cta_link }}" class="inline-flex items-center px-5 py-3 rounded-xl bg-red-600 text-white text-sm font-semibold hover:bg-red-500 transition shadow-lg shadow-red-600/20">
           {{ .Params.cta_label }}
         </a>
-        <a href="/works" class="inline-flex items-center px-5 py-3 rounded-xl bg-slate-900 text-slate-200 border border-slate-800 text-sm font-medium hover:bg-slate-800 hover:text-white transition">
+        <a href="/works" class="inline-flex items-center px-5 py-3 rounded-xl bg-neutral-900 text-neutral-200 border border-neutral-800 text-sm font-medium hover:bg-neutral-800 hover:text-white transition">
           Explore Works
         </a>
       </div>
@@ -27,25 +27,25 @@
   </section>
 
   <!-- Featured Works -->
-  <section class="py-16 border-b border-slate-800/80">
+  <section class="py-16 border-b border-neutral-800/80">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-2xl font-bold tracking-tight text-white">Selected Works</h2>
-      <a href="/works" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition">View all →</a>
+      <a href="/works" class="text-sm font-medium text-red-400 hover:text-red-300 transition">View all →</a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {{ range first 4 (where site.RegularPages "Section" "works") }}
-        <a href="{{ .RelPermalink }}" class="group block rounded-2xl bg-slate-900/50 border border-slate-800/80 p-4 hover:border-sky-500/40 hover:bg-slate-900 transition duration-300">
-          <div class="overflow-hidden rounded-xl bg-slate-800 aspect-video mb-4">
+        <a href="{{ .RelPermalink }}" class="group block rounded-2xl bg-neutral-900/50 border border-neutral-800/80 p-4 hover:border-red-500/40 hover:bg-neutral-900 transition duration-300">
+          <div class="overflow-hidden rounded-xl bg-neutral-800 aspect-video mb-4">
             {{ with .Params.thumbnail }}
               <img src="{{ . }}" alt="{{ $.Title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-500" />
             {{ end }}
           </div>
           <div class="flex items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold text-white group-hover:text-sky-300 transition">{{ .Title }}</h3>
-            <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-400">{{ .Params.year }}</span>
+            <h3 class="text-lg font-semibold text-white group-hover:text-red-300 transition">{{ .Title }}</h3>
+            <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-neutral-800 text-neutral-400">{{ .Params.year }}</span>
           </div>
-          <p class="text-slate-400 text-sm mt-1">{{ .Params.client }}</p>
+          <p class="text-neutral-400 text-sm mt-1">{{ .Params.client }}</p>
         </a>
       {{ end }}
     </div>
@@ -55,19 +55,19 @@
   <section class="py-16">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-2xl font-bold tracking-tight text-white">Recent Writing</h2>
-      <a href="/articles" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition">Read all →</a>
+      <a href="/articles" class="text-sm font-medium text-red-400 hover:text-red-300 transition">Read all →</a>
     </div>
 
     <div class="grid grid-cols-1 gap-4">
       {{ range first 3 (where site.RegularPages "Section" "articles") }}
-        <a href="{{ .RelPermalink }}" class="group p-5 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/80 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <a href="{{ .RelPermalink }}" class="group p-5 rounded-2xl bg-neutral-900/40 border border-neutral-800/80 hover:border-red-500/30 hover:bg-neutral-900/80 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h3 class="font-semibold text-slate-100 group-hover:text-sky-300 transition">{{ .Title }}</h3>
+            <h3 class="font-semibold text-neutral-100 group-hover:text-red-300 transition">{{ .Title }}</h3>
             {{ with .Summary }}
-              <p class="text-sm text-slate-400 mt-1 line-clamp-1">{{ . }}</p>
+              <p class="text-sm text-neutral-400 mt-1 line-clamp-1">{{ . }}</p>
             {{ end }}
           </div>
-          <time class="text-xs font-medium text-slate-500 shrink-0">
+          <time class="text-xs font-medium text-neutral-500 shrink-0">
             {{ .Date.Format "Jan 2, 2006" }}
           </time>
         </a>

@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <article class="py-12 max-w-3xl">
+    <header class="border-b border-neutral-800/80 pb-8">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
+        {{ .Title }}
+      </h1>
+      {{ with .Params.summary }}
+        <p class="mt-4 text-lg text-neutral-400 leading-relaxed">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="prose prose-invert prose-neutral max-w-none mt-10">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.focus }}
+      <section class="mt-12 pt-10 border-t border-neutral-800/80">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-red-400 mb-6">How I Work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {{ range . }}
+            <div class="p-5 rounded-2xl bg-neutral-900/50 border border-neutral-800/80">
+              <h3 class="font-semibold text-white">{{ .title }}</h3>
+              <p class="text-sm text-neutral-400 mt-2 leading-relaxed">{{ .description }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

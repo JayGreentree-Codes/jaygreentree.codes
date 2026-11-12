@@ -1,19 +1,20 @@
-<footer class="border-t border-slate-800/80 mt-20 bg-slate-950/50">
-  <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+<footer class="border-t border-neutral-800/80 mt-20 bg-neutral-950/60">
+  <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-neutral-400">
     
     <div class="flex items-center gap-3">
-      <span>Copyright &copy; {{ now.Year }} Jay Greentree</span>
+      <span>© {{ now.Year }} Jay Greentree</span>
     </div>
 
     <div class="flex items-center gap-6">
+      <a href="/uses" class="hover:text-red-400 transition">Uses</a>
       {{ with site.Params.github }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">GitHub</a>
       {{ end }}
       {{ with site.Params.linkedin }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-white transition">LinkedIn</a>
+        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">LinkedIn</a>
       {{ end }}
       {{ with site.Params.email }}
-        <a href="mailto:{{ . }}" class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 font-medium hover:border-slate-700 hover:text-white transition">
+        <a href="mailto:{{ . }}" class="px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-200 font-medium hover:border-red-500/50 hover:text-white transition">
           Email Me
         </a>
       {{ end }}
