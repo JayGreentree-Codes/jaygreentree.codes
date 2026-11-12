@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://localhost:41159/works/higher-boud/</loc>
-  </url><url>
-    <loc>http://localhost:41159/articles/</loc>
-  </url><url>
-    <loc>http://localhost:41159/contact/</loc>
-  </url><url>
-    <loc>http://localhost:41159/</loc>
-  </url><url>
-    <loc>http://localhost:41159/works/</loc>
-  </url><url>
-    <loc>http://localhost:41159/resume/</loc>
-  </url>
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://jaygreentree.codes/works/higher-boud/</loc></url><url><loc>https://jaygreentree.codes/articles/</loc></url><url><loc>https://jaygreentree.codes/contact/</loc></url><url><loc>https://jaygreentree.codes/</loc></url><url><loc>https://jaygreentree.codes/works/</loc></url><url><loc>https://jaygreentree.codes/resume/</loc></url></urlset>
