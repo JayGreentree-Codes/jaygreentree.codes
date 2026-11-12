@@ -2,21 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:33849/works/higher-boud/</loc>
+    <loc>http://localhost:41159/works/higher-boud/</loc>
   </url><url>
-    <loc>http://localhost:33849/articles/</loc>
-    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+    <loc>http://localhost:41159/articles/</loc>
   </url><url>
-    <loc>http://localhost:33849/articles/hello-world/</loc>
-    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+    <loc>http://localhost:41159/contact/</loc>
   </url><url>
-    <loc>http://localhost:33849/</loc>
-    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+    <loc>http://localhost:41159/</loc>
   </url><url>
-    <loc>http://localhost:33849/contact/</loc>
+    <loc>http://localhost:41159/works/</loc>
   </url><url>
-    <loc>http://localhost:33849/works/</loc>
-  </url><url>
-    <loc>http://localhost:33849/resume/</loc>
+    <loc>http://localhost:41159/resume/</loc>
   </url>
 </urlset>
