@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on JayGreentree Codes</title><link>https://jaygreentree.codes/</link><description>Recent content in Home on JayGreentree Codes</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://jaygreentree.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Development and Design</title><link>https://jaygreentree.codes/works/higher-boud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jaygreentree.codes/works/higher-boud/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Higher Bound Inc needed a unified web presence and component library to consolidate four separate product sites into a single, fast static architecture.&lt;/p&gt;
-&lt;h2 id="the-challenge"&gt;The Challenge&lt;/h2&gt;
-&lt;h2 id="the-solution"&gt;The Solution&lt;/h2&gt;</description></item><item><title>Contact</title><link>https://jaygreentree.codes/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jaygreentree.codes/contact/</guid><description>Have a project in mind or want to chat about web architecture? Send a message below or email me directly.</description></item><item><title>Resume</title><link>https://jaygreentree.codes/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jaygreentree.codes/resume/</guid><description>Senior Full-Stack Developer &amp;amp; Designer with 8+ years of experience building fast web applications.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on JayGreentree Codes</title>
+    <link>http://localhost:37681/</link>
+    <description>Recent content in Home on JayGreentree Codes</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <atom:link href="http://localhost:37681/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:37681/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37681/resume/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:37681/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37681/contact/</guid>
+      <description>Have a project in mind or want to chat about web architecture? Send a message below or email me directly.</description>
+    </item>
+  </channel>
+</rss>

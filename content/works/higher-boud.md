@@ -2,6 +2,7 @@
 title: "Web Development and Design"
 client: "Higher Bound Inc"
 year: "2015-2016"
+draft: true
 live_url: ""
 thumbnail: ""
 tags: ["", "", ""]

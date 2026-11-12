@@ -1,7 +1,8 @@
 {{ define "main" }}
   <!-- Hero Section -->
   <section class="py-16 md:py-24 border-b border-neutral-800/80">
-    {{ with site.Params.availability }}
+
+    {{ with .Params.availability }}
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-medium mb-6">
         <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
         {{ . }}
