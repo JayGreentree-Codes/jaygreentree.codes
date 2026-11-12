@@ -1,0 +1,63 @@
+baseURL = "https://jaygreentree.codes"
+locale = "en-US"
+title = "JayGreentree Codes"
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = "assets/notwatching/hugo_stats\\.json"
+    target = "css"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    disableWatch = true
+    source = "hugo_stats.json"
+    target = "assets/notwatching/hugo_stats.json"
+
+[security]
+  [security.funcs]
+    getenv = ["^HUGO_", "^CI$"]
+
+[params]
+  availability = "Available for freelance projects"
+  email = ""
+  github = ""
+  linkedin = ""
+
+[[menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "Articles"
+  pageRef = "/articles"
+  weight = 20
+
+[[menus.main]]
+  name = "Works"
+  pageRef = "/works"
+  weight = 30
+
+[[menus.main]]
+  name = "Resume"
+  pageRef = "/resume"
+  weight = 40
+
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 50

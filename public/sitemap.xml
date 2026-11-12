@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:41177/works/higher-boud/</loc>
+  </url><url>
+    <loc>http://localhost:41177/articles/</loc>
+    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:41177/articles/hello-world/</loc>
+    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:41177/</loc>
+    <lastmod>2026-11-12T09:00:00-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:41177/contact/</loc>
+  </url><url>
+    <loc>http://localhost:41177/resume/</loc>
+  </url><url>
+    <loc>http://localhost:41177/works/</loc>
+  </url>
+</urlset>

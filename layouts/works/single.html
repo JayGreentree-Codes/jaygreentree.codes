@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <article class="py-12">
+    <a href="/works" class="inline-flex items-center text-sm font-medium text-slate-400 hover:text-sky-300 transition mb-8">
+      ← Back to Works
+    </a>
+
+    <header class="border-b border-slate-800/80 pb-8">
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white">{{ .Title }}</h1>
+      
+      <div class="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
+        {{ with .Params.client }}
+          <div>
+            <span class="text-slate-500 block text-xs uppercase tracking-wider">Client</span>
+            <span class="font-medium text-slate-200 mt-0.5 block">{{ . }}</span>
+          </div>
+        {{ end }}
+        {{ with .Params.year }}
+          <div>
+            <span class="text-slate-500 block text-xs uppercase tracking-wider">Year</span>
+            <span class="font-medium text-slate-200 mt-0.5 block">{{ . }}</span>
+          </div>
+        {{ end }}
+        {{ with .Params.live_url }}
+          <div class="sm:ml-auto">
+            <a href="{{ . }}" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
+              Visit Live Site ↗
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </header>
+
+    {{ with .Params.thumbnail }}
+      <div class="my-10 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+        <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-auto" />
+      </div>
+    {{ end }}
+
+    <div class="prose prose-invert prose-slate max-w-3xl mt-10">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
