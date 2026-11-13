@@ -2,12 +2,23 @@
   <!-- Hero Section -->
   <section class="py-16 md:py-24 border-b border-neutral-800/80">
 
-    {{ with .Params.availability }}
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-medium mb-6">
-        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-        {{ . }}
-      </div>
-    {{ end }}
+{{ with .Params.availability }}
+  {{/* Default to green (available) */}}
+  {{ $badgeColors := "bg-green-500/10 border-green-500/20 text-green-300" }}
+  {{ $dotColor := "bg-green-500" }}
+
+  {{/* Switch to red if the text contains "not" or "unavailable" */}}
+  {{ if or (in (lower .) "not") (in (lower .) "unavailable") }}
+    {{ $badgeColors = "bg-red-500/10 border-red-500/20 text-red-300" }}
+    {{ $dotColor = "bg-red-500" }}
+  {{ end }}
+
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full {{ $badgeColors }} border text-xs font-medium mb-6">
+    <span class="w-2 h-2 rounded-full {{ $dotColor }} animate-pulse"></span>
+    {{ . }}
+  </div>
+{{ end }}
+
 
     <h1 class="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent max-w-3xl leading-[1.15]">
       {{ .Params.hero_headline }}
