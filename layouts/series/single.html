@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+  <!-- Back to Series Link -->
+  {{ with .Parent }}
+    <nav class="mb-6">
+      <a href="{{ .RelPermalink }}" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-600 transition hover:text-red-600 dark:text-zinc-400 dark:hover:text-red-400">
+        <span aria-hidden="true">&larr;</span>
+        <span>Part of the <strong>{{ .Title }}</strong> series</span>
+      </a>
+    </nav>
+  {{ end }}
+
+  <!-- Sermon Header -->
+  <header class="mb-8">
+    <div class="flex flex-wrap items-center gap-2 text-sm font-medium text-red-600 dark:text-red-400">
+      {{ with .Params.part }}<span>Part {{ . }}</span>{{ end }}
+      {{ with .Params.scripture }}
+        <span aria-hidden="true">&bull;</span>
+        <span>{{ . }}</span>
+      {{ end }}
+    </div>
+
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">
+      {{ .Title }}
+    </h1>
+
+    <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400">
+      {{ with .Params.speaker }}<span>Speaker: <strong class="font-medium text-zinc-700 dark:text-zinc-300">{{ . }}</strong></span>{{ end }}
+      <span aria-hidden="true">&bull;</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+  </header>
+
+  <!-- Audio Player -->
+  {{ with .Params.audio_url }}
+    <div class="mb-8 rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+      <p class="mb-2 text-xs font-semibold tracking-wider text-zinc-500 uppercase dark:text-zinc-400">Listen to Sermon</p>
+      <audio controls class="w-full">
+        <source src="{{ . }}" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  {{ end }}
+
+  <!-- Sermon Notes / Content -->
+  <div class="space-y-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-zinc-900 dark:[&_h3]:text-zinc-100 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

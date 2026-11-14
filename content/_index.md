@@ -1,8 +1,10 @@
 ---
 title: "Home"
-#hero_headline: ""
-#hero_subtext: ""
-#cta_label: ""
-#cta_link: ""
-availability: ""
+availability: "Not available for new projects"
+hero_headline: ""
+hero_subtext: ""
+cta_label: "Services Times"
+cta_link: "/services-times"
 ---
+
+This is a test

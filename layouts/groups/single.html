@@ -1,0 +1,86 @@
+{{ define "main" }}
+<article class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+  <!-- Back Link -->
+  <nav class="mb-6">
+    <a 
+      href="{{ "groups/" | relURL }}" 
+      class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-600 transition hover:text-red-600 dark:text-zinc-400 dark:hover:text-red-400"
+    >
+      <span aria-hidden="true">&larr;</span>
+      <span>All Lifegroups</span>
+    </a>
+  </nav>
+
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+    <!-- Main Description (Left 2 Columns) -->
+    <div class="lg:col-span-2">
+      {{ with .Params.category }}
+        <span class="inline-block rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700 dark:bg-red-950/60 dark:text-red-300">
+          {{ . }}
+        </span>
+      {{ end }}
+
+      <h1 class="mt-3 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">
+        {{ .Title }}
+      </h1>
+
+      {{ with .Params.leader }}
+        <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+          Led by <strong class="font-semibold text-zinc-900 dark:text-zinc-200">{{ . }}</strong>
+        </p>
+      {{ end }}
+
+      <div class="mt-8 space-y-4 text-base leading-relaxed text-zinc-700 dark:text-zinc-300 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-zinc-900 dark:[&_h3]:text-zinc-100 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <!-- Details & Sign-Up Card (Right Column) -->
+    <aside class="lg:col-span-1">
+      <div class="sticky top-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-50">Group Details</h2>
+
+        <dl class="mt-4 space-y-3 text-sm">
+          {{ with .Params.day }}
+            <div>
+              <dt class="text-xs font-semibold tracking-wider text-zinc-500 uppercase">Day & Time</dt>
+              <dd class="mt-0.5 font-medium text-zinc-900 dark:text-zinc-100">
+                {{ . }}{{ with $.Params.time }} &bull; {{ . }}{{ end }}
+              </dd>
+            </div>
+          {{ end }}
+
+          {{ with .Params.location }}
+            <div>
+              <dt class="text-xs font-semibold tracking-wider text-zinc-500 uppercase">Location</dt>
+              <dd class="mt-0.5 font-medium text-zinc-900 dark:text-zinc-100">{{ . }}</dd>
+            </div>
+          {{ end }}
+
+          <div>
+            <dt class="text-xs font-semibold tracking-wider text-zinc-500 uppercase">Childcare</dt>
+            <dd class="mt-0.5 font-medium text-zinc-900 dark:text-zinc-100">
+              {{ if .Params.childcare }}Childcare Provided{{ else }}No Childcare{{ end }}
+            </dd>
+          </div>
+        </dl>
+
+        <div class="mt-6 border-t border-zinc-200 pt-6 dark:border-zinc-800">
+          {{ if .Params.open }}
+            <a 
+              href="#join-group" 
+              class="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-semibold text-white shadow-xs transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900"
+            >
+              Join This Group
+            </a>
+          {{ else }}
+            <div class="rounded-xl border border-zinc-200 bg-white px-4 py-3 text-center text-sm font-medium text-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-400">
+              This group is currently full
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </aside>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>At The Movies on JayGreentree Codes</title>
+    <link>http://localhost:1313/series/at-the-movies/</link>
+    <description>Recent content in At The Movies on JayGreentree Codes</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 13 Nov 2026 18:05:39 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/at-the-movies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 1 Saved by Faith</title>
+      <link>http://localhost:1313/series/at-the-movies/part-1-saved-by-faith/</link>
+      <pubDate>Fri, 13 Nov 2026 18:05:39 -0600</pubDate>
+      <guid>http://localhost:1313/series/at-the-movies/part-1-saved-by-faith/</guid>
+      <description>&lt;h3 id=&#34;sermon-notes&#34;&gt;Sermon Notes&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Key point 1&lt;/li&gt;&#xA;&lt;li&gt;Key point 2&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

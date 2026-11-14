@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on JayGreentree Codes</title>
-    <link>http://localhost:37681/articles/</link>
-    <description>Recent content in Articles on JayGreentree Codes</description>
+    <title>Articles on Donica Church of God</title>
+    <link>//localhost:1313/articles/</link>
+    <description>Recent content in Articles on Donica Church of God</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="http://localhost:37681/articles/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

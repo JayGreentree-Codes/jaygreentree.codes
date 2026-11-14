@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on JayGreentree Codes</title>
-    <link>http://localhost:37681/</link>
-    <description>Recent content in Home on JayGreentree Codes</description>
+    <title>Home on Donica Church of God</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Donica Church of God</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="http://localhost:37681/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Nov 2026 18:05:39 -0600</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 1 Saved by Faith</title>
+      <link>//localhost:1313/series/at-the-movies/part-1-saved-by-faith/</link>
+      <pubDate>Fri, 13 Nov 2026 18:05:39 -0600</pubDate>
+      <guid>//localhost:1313/series/at-the-movies/part-1-saved-by-faith/</guid>
+      <description>&lt;h3 id=&#34;sermon-notes&#34;&gt;Sermon Notes&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Key point 1&lt;/li&gt;&#xA;&lt;li&gt;Key point 2&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title></title>
-      <link>http://localhost:37681/resume/</link>
+      <link>//localhost:1313/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37681/resume/</guid>
+      <guid>//localhost:1313/resume/</guid>
       <description></description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:37681/contact/</link>
+      <link>//localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37681/contact/</guid>
-      <description>Have a project in mind or want to chat about web architecture? Send a message below or email me directly.</description>
+      <guid>//localhost:1313/contact/</guid>
+      <description>How can we help? If you need immediate assistance please call the church at: (812) 279-1571</description>
     </item>
   </channel>
 </rss>

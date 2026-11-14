@@ -1,6 +1,6 @@
 ---
 title: "Contact"
 layout: "contact"
-summary: "Have a project in mind or want to chat about web architecture? Send a message below or email me directly."
+summary: "How can we help? If you need immediate assistance please call the church at: (812) 279-1571"
 form_action: "https://formspree.io/f/xpzevppa"
 ---

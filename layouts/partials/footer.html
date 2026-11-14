@@ -6,12 +6,20 @@
     </div>
 
     <div class="flex items-center gap-6">
-      <a href="/uses" class="hover:text-red-400 transition">Uses</a>
-      {{ with site.Params.github }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">GitHub</a>
+      {{ with site.Params.facebook }}
+      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">
+        Facebook
+      </a>
+      {{ end }}
+      {{ with site.Params.instagram }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">
+          Instagram
+        </a>
       {{ end }}
       {{ with site.Params.linkedin }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">LinkedIn</a>
+        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-red-400 transition">
+          LinkedIn
+        </a>
       {{ end }}
       {{ with site.Params.email }}
         <a href="mailto:{{ . }}" class="px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-200 font-medium hover:border-red-500/50 hover:text-white transition">

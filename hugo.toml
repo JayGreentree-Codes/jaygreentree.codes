@@ -1,12 +1,12 @@
-baseURL = "https://jaygreentree.codes"
+baseURL = ""
 locale = "en-US"
-title = "JayGreentree Codes"
-disableKinds = ["taxonomy", "term"]
+title = "Donica Church of God"
+#disableKinds = ["taxonomy", "term"]
 
 [markup]
   [markup.highlight]
     style = "github-dark"
-    lineNos = false
+    lineNos = true
 
 [build]
   [build.buildStats]
@@ -32,7 +32,7 @@ disableKinds = ["taxonomy", "term"]
     getenv = ["^HUGO_", "^CI$"]
 
 [params]
-  availability = "Available for freelance projects"
+  availability = " "
   email = ""
   github = ""
   linkedin = ""
@@ -43,21 +43,36 @@ disableKinds = ["taxonomy", "term"]
   weight = 10
 
 [[menus.main]]
-  name = "Articles"
-  pageRef = "/articles"
+  name = "Who We Are"
+  pageRef = "/about"
   weight = 20
 
 [[menus.main]]
-  name = "Works"
-  pageRef = "/works"
+  name = "Location"
+  pageRef = "/location"
   weight = 30
 
 [[menus.main]]
-  name = "Resume"
-  pageRef = "/resume"
+  name = "Ministries"
+  pageRef = "/ministries"
   weight = 40
 
 [[menus.main]]
   name = "Contact"
   pageRef = "/contact"
   weight = 50
+
+[[menus.main]]
+  name = "Sermons"
+  pageRef = "/series"
+  weight = 60
+
+[[menus.main]]
+  name = "Lifegroups"
+  pageRef = "/groups"
+  weight = 70
+
+[[menus.main]]
+  name = "Give"
+  pageRef = "/give"
+  weight = 80
